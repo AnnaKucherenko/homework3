@@ -1,0 +1,372 @@
+:root {
+  --primary-text-color: #212121;
+  --secondery-text-color: #757575;
+  --text-logo-one: #2196f3;
+  --text-logo-two: #000000;
+  --text-logo-three: #ffffff;
+  --link-active: #2196f3;
+  --text-on-dark-background: #ffffff;
+  --primary-background: #e5e5e5;
+  --dark-background: #2f303a;
+  --grey-background: #f5f4fa;
+  --header-background: #ffffff;
+  --button-background: #f5f4fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: var(--primary-background);
+  color: var(--primary-text-color);
+
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+}
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/*---- Header-----*/
+.header {
+  border-bottom: 1px solid #ececec;
+  background-color: var(--header-background);
+}
+
+.logo-header {
+  margin-right: 93px;
+
+  color: var(--text-logo-two);
+  font-family: "Raleway", sans-serif;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.logo-span {
+  color: var(--text-logo-one);
+}
+
+.header-nav,
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-nav .link:hover,
+.header-nav .link:focus {
+  color: var(--link-active);
+}
+
+.header-nav .link.cureent {
+  color: var(--link-active);
+}
+
+.header-contakt {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contakt-item:nth-child(1) {
+  margin-right: 50px;
+}
+
+.header-contakt .link {
+  color: var(--secondery-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-contakt .link:hover,
+.header-contakt .link:focus {
+  color: var(--link-active);
+}
+
+/*---- Hero-----*/
+.hero {
+  padding: 200px;
+
+  background-color: var(--dark-background);
+  text-align: center;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+
+  color: var(--text-on-dark-background);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-button {
+  color: var(--text-on-dark-background);
+  background: #2196f3;
+
+  padding: 10px 32px;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+}
+
+/*---- benefits-----*/
+.benefits .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits-item {
+  width: 270px;
+}
+
+.benefits-feature {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.benefits-text {
+  color: var(--secondery-text-color);
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+/*-- occupation  чем мЫ занимаемся-*/
+.occupation .section {
+  padding-top: 0;
+}
+
+.occupation-title,
+.team-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.occupation .list,
+.team .list {
+  display: flex;
+  justify-content: space-between;
+}
+/*-- Team-*/
+.team {
+  background-color: var(--grey-background);
+}
+
+.team-card {
+  width: 270px;
+  padding-bottom: 30px;
+
+  background-color: var(--header-background);
+}
+
+.team-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-text {
+  color: var(--secondery-text-color);
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+/*-- Footer-*/
+.footer {
+  background-color: var(--dark-background);
+}
+
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: var(--text-logo-three);
+  font-family: "Raleway", sans-serif;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.address .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address {
+  color: var(--text-on-dark-background);
+
+  font-size: 14px;
+  line-height: 1.71;
+
+  font-style: inherit;
+}
+
+.address-contacts .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address-contacts .link:hover,
+.address-contacts .link:focus {
+  color: var(--link-active);
+}
+
+/*-- Portfolio-*/
+.choice,
+.projects {
+  display: flex;
+}
+.choice {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.projects {
+  flex-wrap: wrap;
+}
+
+.portfolio-button {
+  display: block;
+
+  padding: 6px 22px;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  color: var(--primary-text-color);
+  background-color: var(--button-background);
+
+  cursor: pointer;
+}
+
+.choice .item {
+  min-width: 73px;
+}
+
+.choice .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+  color: var(--text-on-dark-background);
+  background-color: var(--link-active);
+}
+
+.portfolio-projects {
+  width: calc ((100%-60)/3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 370px;
+  border-bottom: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  background-color: var(--header-background);
+}
+
+.portfolio-projects:nth-child(3n) {
+  margin-right: 0;
+}
+
+.projects-title {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+  color: var(--primary-text-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects-text {
+  margin-left: 24px;
+  color: var(--secondery-text-color);
+
+  font-size: 16px;
+  line-height: 1.87;
+}
