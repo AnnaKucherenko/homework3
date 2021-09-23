@@ -6,17 +6,11 @@
   --text-logo-three: #ffffff;
   --link-active: #2196f3;
   --text-on-dark-background: #ffffff;
-  --primary-background: #e5e5e5;
+  --primary-background: #ffffff;
   --dark-background: #2f303a;
   --grey-background: #f5f4fa;
   --header-background: #ffffff;
   --button-background: #f5f4fa;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 h1,
@@ -31,6 +25,12 @@ ul {
   padding: 0;
   margin: 0;
   border: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -49,9 +49,8 @@ body {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px;
+  margin: 0 auto;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   outline: 2px solid tomato;
@@ -60,6 +59,17 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 /*---- Header-----*/
@@ -139,7 +149,7 @@ body {
 
 /*---- Hero-----*/
 .hero {
-  padding: 200px;
+  padding: 200px 452px;
 
   background-color: var(--dark-background);
   text-align: center;
@@ -147,6 +157,7 @@ body {
 
 .hero-title {
   margin-bottom: 30px;
+  min-width: 696px;
 
   color: var(--text-on-dark-background);
   font-weight: 900;
@@ -215,16 +226,30 @@ body {
 .occupation .list,
 .team .list {
   display: flex;
-  justify-content: space-between;
+  margin-left: -30px;
 }
+
+.occupation-item {
+  flex-basis: calc((100%-60px) / 3);
+  margin-left: 30px;
+}
+
 /*-- Team-*/
 .team {
   background-color: var(--grey-background);
 }
 
+.team .list {
+  margin-left: -30px;
+}
+
 .team-card {
-  width: 270px;
+  flex-basis: calc((100%-90px) / 4);
+  margin-left: 30px;
   padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
   background-color: var(--header-background);
 }
@@ -301,7 +326,10 @@ body {
 }
 
 .projects {
+  display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .portfolio-button {
@@ -309,6 +337,7 @@ body {
 
   padding: 6px 22px;
   border-radius: 4px;
+  border: transparent;
 
   font-weight: 500;
   font-size: 16px;
@@ -321,40 +350,36 @@ body {
   cursor: pointer;
 }
 
-.choice .item {
-  min-width: 73px;
-}
-
 .choice .item:not(:last-child) {
   margin-right: 8px;
 }
 
 .portfolio-button:hover,
 .portfolio-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
   color: var(--text-on-dark-background);
   background-color: var(--link-active);
 }
 
 .portfolio-projects {
-  width: calc ((100%-60)/3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
-  border-bottom: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  flex-basis: calc(100% / 3-30px);
+
+  margin-left: 30px;
+  margin-top: 30px;
 
   background-color: var(--header-background);
 }
 
-.portfolio-projects:nth-child(3n) {
-  margin-right: 0;
+.projects-card {
+  border: 1px solid #eeeeee;
+  border-top: none;
+  padding: 20px;
 }
 
 .projects-title {
-  margin-top: 20px;
   margin-bottom: 4px;
-  margin-left: 24px;
   color: var(--primary-text-color);
 
   font-weight: 700;
@@ -364,7 +389,6 @@ body {
 }
 
 .projects-text {
-  margin-left: 24px;
   color: var(--secondery-text-color);
 
   font-size: 16px;
